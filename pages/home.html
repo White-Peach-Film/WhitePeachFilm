@@ -1,10 +1,58 @@
-<h1>Welcome to WhitePeachFilm</h1>
-<p>A decentralized platform powered by blockchain technology, providing adult content navigation for users in restricted regions.</p>
-<div class="card">
-    <h2>Our Mission</h2>
-    <p>Break the barriers of content restriction with transparency and privacy.</p>
+<div class="carousel">
+    <img src="images/banner1.jpg" alt="Banner 1" class="active">
+    <img src="images/banner2.jpg" alt="Banner 2">
+    <img src="images/banner3.jpg" alt="Banner 3">
 </div>
-<div class="card">
-    <h2>Key Features</h2>
-    <p>No personal data collected. Open and decentralized access.</p>
+
+<div class="region-select">
+    <div class="region-column">
+        <h2>Select Your Region</h2>
+        <select onchange="location.href='home/' + this.value + '.html'">
+            <option value="">Choose a region</option>
+            <option value="cn">China</option>
+            <option value="en">English (Global)</option>
+        </select>
+    </div>
+    <div class="region-column">
+        <h2>Why Choose Your Region?</h2>
+        <p>Select your region to get tailored adult content platforms operating in your area.</p>
+    </div>
+</div>
+
+<h1>Top Adult Content Sites</h1>
+<div class="sites-grid">
+    <a href="#" onclick="redirect('https://example.com')" class="site-item">
+        <img src="images/site1.png" alt="Site 1"> Site 1
+    </a>
+    <a href="#" onclick="redirect('https://example2.com')" class="site-item">
+        <img src="images/site2.png" alt="Site 2"> Site 2
+    </a>
+    <a href="#" onclick="redirect('https://example3.com')" class="site-item">
+        <img src="images/site3.png" alt="Site 3"> Site 3
+    </a>
+    <a href="#" onclick="redirect('https://example4.com')" class="site-item">
+        <img src="images/site4.png" alt="Site 4"> Site 4
+    </a>
+    <a href="#" onclick="redirect('https://example5.com')" class="site-item">
+        <img src="images/site5.png" alt="Site 5"> Site 5
+    </a>
+    <a href="#" onclick="redirect('https://example6.com')" class="site-item">
+        <img src="images/site6.png" alt="Site 6"> Site 6
+    </a>
+</div>
+
+<h1>Hall of Fame</h1>
+<div class="hall-grid">
+    <a href="#" onclick="redirect('https://celeb1.com')" class="hall-item">
+        <img src="images/celeb1.jpg" alt="Celeb 1"> Celeb 1
+    </a>
+    <a href="#" onclick="redirect('https://celeb2.com')" class="hall-item">
+        <img src="images/celeb2.jpg" alt="Celeb 2"> Celeb 2
+    </a>
+    <a href="#" onclick="redirect('https://celeb3.com')" class="hall-item">
+        <img src="images/celeb3.jpg" alt="Celeb 3"> Celeb 3
+    </a>
+    <a href="#" onclick="redirect('https://celeb4.com')" class="hall-item">
+        <img src="images/celeb4.jpg" alt="Celeb 4"> Celeb 4
+    </a>
 </div>

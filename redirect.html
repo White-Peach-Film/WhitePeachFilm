@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhitePeachFilm - Redirecting</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leaving WhitePeachFilm</h1>
+        <p>You are about to visit an external site. Please note:</p>
+        <ul>
+            <li>Content risks are your responsibility.</li>
+            <li>Paid access or other actions are unrelated to WhitePeachFilm.</li>
+        </ul>
+        <button onclick="proceed()">Proceed</button>
+        <button onclick="window.location.href='index.html'">Cancel</button>
+    </div>
+    <script>
+        function proceed() {
+            const url = new URLSearchParams(window.location.search).get('url');
+            if (url) window.location.href = url;
+        }
+    </script>
+</body>
+</html>

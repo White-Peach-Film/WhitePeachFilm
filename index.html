@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhitePeachFilm - Decentralized Adult Content Navigation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar">
+        <div class="logo">WhitePeachFilm</div>
+        <ul class="nav-links">
+            <li><a href="#" onclick="loadPage('home')">Home</a></li>
+            <li><a href="#" onclick="loadPage('navigation')">Navigation</a></li>
+            <li><a href="#" onclick="loadPage('token')">Witep Token</a></li>
+            <li><a href="#" onclick="loadPage('community')">Community</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content area -->
+    <div id="content" class="container"></div>
+
+    <!-- Agreement modal -->
+    <div id="agreement" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to WhitePeachFilm</h2>
+            <p>This platform provides adult content navigation for restricted regions.</p>
+            <p>You must be 18+ and agree to comply with your local laws to proceed.</p>
+            <button onclick="agree()">I am 18+ and Agree</button>
+            <button onclick="deny()">Under 18</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Load home page on initial visit if agreed, otherwise show modal
+        window.onload = function() {
+            if (!localStorage.getItem('agreed')) {
+                document.getElementById('agreement').style.display = 'flex';
+            } else {
+                loadPage('home');
+            }
+        };
+    </script>
+</body>
+</html>

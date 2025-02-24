@@ -92,8 +92,8 @@ body {
 }
 
 .carousel-controls button {
-    width: 10px;
-    height: 10px;
+    width: 8px; /* 更小的圆点 */
+    height: 8px;
     border-radius: 50%;
     background-color: #e0e0e0;
     border: none;
@@ -107,15 +107,13 @@ body {
 
 .region-select {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     margin: 25px 0;
     gap: 15px;
 }
 
 .region-column {
-    width: 100%;
-    max-width: 48%;
+    width: 48%;
     background-color: #2a2a3d;
     padding: 15px;
     border-radius: 10px;
@@ -140,6 +138,12 @@ body {
     border: none;
     background-color: #3b3b50;
     color: #e0e0e0;
+}
+
+h1 {
+    text-align: center; /* 标题居中 */
+    color: #ffd700;
+    margin: 30px 0 20px;
 }
 
 .sites-grid, .hall-grid, .sponsor-grid {
@@ -241,25 +245,6 @@ button:hover {
     color: #e0e0e0;
 }
 
-.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 0;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-.footer-links a {
-    color: #ffd700;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -281,7 +266,7 @@ button:hover {
     }
 
     .region-column {
-        max-width: 100%;
+        width: 100%;
     }
 
     .sites-grid, .sponsor-grid {

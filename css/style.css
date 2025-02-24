@@ -146,6 +146,13 @@ h1 {
     margin: 30px 0 20px;
 }
 
+h2 {
+    text-align: center;
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
 p {
     text-align: center;
     margin-bottom: 20px;
@@ -203,11 +210,73 @@ p {
     margin: 30px 0;
 }
 
-.region-nav h2 {
-    color: #ffd700;
-    font-size: 24px;
-    margin-bottom: 15px;
+.token-info {
+    margin: 30px 0;
+}
+
+.token-details {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.token-card {
+    background-color: #2a2a3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.token-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.token-card h3 {
+    color: #ffd700;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.token-card p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.token-links {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.link-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.token-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: #1e1e2f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.token-button:hover {
+    background-color: #e6c200;
+}
+
+.note {
+    font-size: 14px;
+    color: #bbbbbb;
 }
 
 button {
@@ -291,6 +360,16 @@ button:hover {
 
     .hall-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .token-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .token-card {
+        width: 100%;
+        max-width: 300px;
     }
 }
 

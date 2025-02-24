@@ -26,12 +26,24 @@ function loadPage(page) {
 
 function startCarousel() {
     const images = document.querySelectorAll('.carousel img');
+    const buttons = document.querySelectorAll('.carousel-controls button');
     let current = 0;
+
+    function showSlide(index) {
+        images.forEach(img => img.classList.remove('active'));
+        buttons.forEach(btn => btn.classList.remove('active'));
+        images[index].classList.add('active');
+        buttons[index].classList.add('active');
+        current = index;
+    }
+
+    buttons.forEach((btn, index) => {
+        btn.addEventListener('click', () => showSlide(index));
+    });
+
     setInterval(() => {
-        images[current].classList.remove('active');
-        current = (current + 1) % images.length;
-        images[current].classList.add('active');
-    }, 3000);
+        showSlide((current + 1) % images.length);
+    }, 4000);
 }
 
 function redirect(url) {

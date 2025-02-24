@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhitePeachFilm - Redirecting</title>
+    <title>WhitePeachFilm - External Link Notice</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Leaving WhitePeachFilm</h1>
-        <p>You are about to visit an external site:</p>
-        <ul>
-            <li>Content risks are your responsibility.</li>
-            <li>Paid access is unrelated to WhitePeachFilm.</li>
-        </ul>
-        <button onclick="proceed()">Proceed</button>
-        <button onclick="window.location.href='index.html'">Cancel</button>
+    <div class="modal" style="display: flex;">
+        <div class="modal-content">
+            <h1>External Link Notice</h1>
+            <p>You are about to leave WhitePeachFilm and visit an external website. Please be aware:</p>
+            <ul>
+                <li>The content and services on the external site are not controlled or endorsed by WhitePeachFilm.</li>
+                <li>You are solely responsible for assessing the risks associated with accessing third-party content.</li>
+                <li>Any interactions, including paid subscriptions or services, are independent of WhitePeachFilm, and we bear no liability for them.</li>
+                <li>Ensure compliance with your local laws and regulations before proceeding.</li>
+            </ul>
+            <button onclick="proceed()">Proceed to External Site</button>
+            <button onclick="window.location.href='index.html'">Stay on WhitePeachFilm</button>
+        </div>
     </div>
     <script>
         function proceed() {
             const url = new URLSearchParams(window.location.search).get('url');
-            if (url) window.location.href = url;
+            if (url) window.open(url, '_blank');
         }
     </script>
 </body>

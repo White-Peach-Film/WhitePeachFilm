@@ -16,6 +16,8 @@ function loadPage(page) {
             content.innerHTML = data;
             if (page === 'home') {
                 startCarousel();
+            } else if (page === 'token') {
+                startCountUp();
             }
         })
         .catch(error => {
@@ -44,6 +46,25 @@ function startCarousel() {
     setInterval(() => {
         showSlide((current + 1) % images.length);
     }, 4000);
+}
+
+function startCountUp() {
+    const counters = document.querySelectorAll('.count-up');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        let count = 0;
+        const increment = target / 100; // Adjust speed by changing denominator
+        const updateCounter = () => {
+            count += increment;
+            if (count >= target) {
+                counter.textContent = target.toLocaleString(); // No decimals
+            } else {
+                counter.textContent = Math.ceil(count).toLocaleString();
+                requestAnimationFrame(updateCounter);
+            }
+        };
+        updateCounter();
+    });
 }
 
 function redirect(url) {

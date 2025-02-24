@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhitePeachFilm - Decentralized Adult Content Navigation</title>
+    <title>WhitePeachFilm</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation bar -->
     <nav class="navbar">
         <div class="logo">WhitePeachFilm</div>
         <ul class="nav-links">
@@ -18,15 +17,24 @@
         </ul>
     </nav>
 
-    <!-- Main content area -->
     <div id="content" class="container"></div>
 
-    <!-- Agreement modal -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 WhitePeachFilm. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#" onclick="loadPage('home')">Home</a></li>
+                <li><a href="#" onclick="loadPage('token')">Token</a></li>
+                <li><a href="mailto:contact@whitepeachfilm.com">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
     <div id="agreement" class="modal">
         <div class="modal-content">
             <h2>Welcome to WhitePeachFilm</h2>
-            <p>This platform provides adult content navigation for restricted regions.</p>
-            <p>You must be 18+ and agree to comply with your local laws to proceed.</p>
+            <p>Adult content navigation platform.</p>
+            <p>You must be 18+ and agree to local laws.</p>
             <button onclick="agree()">I am 18+ and Agree</button>
             <button onclick="deny()">Under 18</button>
         </div>
@@ -34,7 +42,6 @@
 
     <script src="js/script.js"></script>
     <script>
-        // Load home page on initial visit if agreed, otherwise show modal
         window.onload = function() {
             if (!localStorage.getItem('agreed')) {
                 document.getElementById('agreement').style.display = 'flex';

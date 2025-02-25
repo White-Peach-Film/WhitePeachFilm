@@ -178,6 +178,7 @@ p {
     text-decoration: none;
     color: #e0e0e0;
     transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center; /* Center text when no image */
 }
 
 .site-item:hover, .hall-item:hover, .sponsor-item:hover {
@@ -288,35 +289,6 @@ p {
 .note {
     font-size: 14px;
     color: #bbbbbb;
-}
-
-.community-info {
-    margin: 30px 0;
-}
-
-.vote-section {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-.vote-section iframe {
-    width: 100%;
-    max-width: 100%;
-}
-
-.community-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #ffd700;
-    color: #1e1e2f;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.community-button:hover {
-    background-color: #e6c200;
 }
 
 button {

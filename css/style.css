@@ -178,7 +178,7 @@ p {
     text-decoration: none;
     color: #e0e0e0;
     transition: transform 0.3s, box-shadow 0.3s;
-    justify-content: center; /* Center text when no image */
+    justify-content: center;
 }
 
 .site-item:hover, .hall-item:hover, .sponsor-item:hover {
@@ -291,6 +291,66 @@ p {
     color: #bbbbbb;
 }
 
+.community-info {
+    margin: 30px 0;
+}
+
+.vote-section {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.vote-section iframe {
+    width: 100%;
+    max-width: 100%;
+}
+
+.community-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffd700;
+    color: #1e1e2f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.community-button:hover {
+    background-color: #e6c200;
+}
+
+.twitter-card {
+    background-color: #2a2a3d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.twitter-card p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.twitter-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #ffd700;
+    color: #1e1e2f;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.twitter-button:hover {
+    background-color: #e6c200;
+    transform: scale(1.05);
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -397,5 +457,10 @@ button:hover {
 
     .hall-grid {
         grid-template-columns: 1fr;
+    }
+
+    .twitter-button {
+        font-size: 16px;
+        padding: 10px 20px;
     }
 }

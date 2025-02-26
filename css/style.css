@@ -60,50 +60,12 @@ body {
 }
 
 .carousel {
-    position: relative;
     width: 100%;
-    height: 400px;
-    overflow: hidden;
+    max-height: 400px;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.carousel img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.carousel img.active {
-    opacity: 1;
-}
-
-.carousel-controls {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 6px;
-}
-
-.carousel-controls button {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #e0e0e0;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.carousel-controls button.active {
-    background-color: #ffd700;
+    display: block;
+    margin: 0 auto;
 }
 
 .region-select {
@@ -191,6 +153,7 @@ p {
     height: 45px;
     margin-right: 12px;
     object-fit: cover;
+    border-radius: 8px; /* 添加圆角 */
 }
 
 .hall-grid {
@@ -206,7 +169,7 @@ p {
 .hall-item img {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
+    border-radius: 50%; /* 保持圆形 */
     margin-bottom: 10px;
 }
 
@@ -439,7 +402,7 @@ p {
 }
 
 .social-button.git {
-    background-color: #F05033; /* GitHub orange */
+    background-color: #F05033;
 }
 
 .social-button.git:hover {

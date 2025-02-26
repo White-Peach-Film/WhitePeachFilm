@@ -438,6 +438,14 @@ p {
     background-color: #4d4d4d;
 }
 
+.social-button.git {
+    background-color: #F05033; /* GitHub orange */
+}
+
+.social-button.git:hover {
+    background-color: #d83e27;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;

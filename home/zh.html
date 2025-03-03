@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WITEP - 首页</title>
+    <link rel="stylesheet" href="/home/style.css">
+</head>
+<body>
+    <div class="sites-grid">
+        <!-- 6x4 网站导航，24 个站点，待补充图片和链接 -->
+        <!-- 示例占位 -->
+        <a href="#" class="site-item"><img src="placeholder.jpg" alt="Site">网站1</a>
+        <!-- 重复 23 次 -->
+    </div>
+
+    <div class="dual-frame">
+        <div class="frame submit-frame">
+            <h2>提交内容</h2>
+            <p>点击按钮提交您的信息</p>
+            <button onclick="window.location.href='#'">提交</button>
+            <!-- 表单链接待补充 -->
+            <p>查看我们的 <a href="https://weibo.com" target="_blank">微博</a></p>
+        </div>
+
+        <div class="frame search-frame">
+            <h2>搜索作者</h2>
+            <input type="text" id="searchInput" placeholder="输入作者名字">
+            <button onclick="searchAuthor()">搜索</button>
+            <div id="searchResults" class="authors-grid"></div>
+        </div>
+    </div>
+
+    <script src="/home/script.js"></script>
+</body>
+</html>

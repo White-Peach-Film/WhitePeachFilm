@@ -7,6 +7,51 @@ body {
     line-height: 1.6;
 }
 
+.navbar {
+    background-color: #2a2a3d;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    color: #ffd700;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0 30px 0 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 6px 12px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    background-color: rgba(255, 215, 0, 0.1);
+    border-radius: 5px;
+}
+
 .carousel {
     position: relative;
     width: 100%;
@@ -14,6 +59,7 @@ body {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    margin-top: 70px; /* Adjusted for fixed navbar */
 }
 
 .region-select {
@@ -126,43 +172,34 @@ h1 {
 }
 
 .ad-frames {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px auto;
+    margin: 25px auto;
     max-width: 1200px;
 }
 
-.ad-frame {
-    width: 300px;
-    height: 250px;
-    background: #2a2a3d;
+.ad-item {
+    background-color: #2a2a3d;
+    padding: 12px;
     border-radius: 10px;
-    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
-    justify-content: center;
     text-decoration: none;
-}
-
-.ad-frame img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
-.footer {
-    background: linear-gradient(180deg, #2a2a3d 0%, #1e1e2f 100%);
-    padding: 20px;
-    text-align: center;
-    width: 100%;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 215, 0, 0.1);
-}
-
-.footer p {
-    margin: 0;
-    font-size: 14px;
     color: #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center;
+}
+
+.ad-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.ad-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 8px;
 }

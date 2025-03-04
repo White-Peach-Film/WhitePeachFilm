@@ -33,7 +33,7 @@
 
     <div class="region-select">
         <div class="region-column">
-            <h2 id="regionTitle">Select Your Region</h2>
+            <h2>Select Your Region</h2>
             <select id="regionSelect" onchange="updateRegion(this.value)">
                 <option value="">Choose a region</option>
                 <option value="zh">China</option>
@@ -136,19 +136,20 @@
         </a>
     </div>
 
+    <div class="footer">
+        <p>&copy; 2025 WhitePeachFilm. All rights reserved.</p>
+    </div>
+
     <script src="js/script.js"></script>
     <script>
         function updateRegion(region) {
-            const title = document.getElementById('adTitle');
             const desc = document.getElementById('regionDesc');
             if (region === 'zh') {
-                title.textContent = 'Advertisements';
                 desc.textContent = 'Get tailored adult content platforms for your area. Visit our Weibo.';
-                window.location.href = 'home/zh.html'; // Fixed redirect
+                window.location.href = 'home/zh.html';
             } else if (region === 'en') {
-                title.textContent = 'Advertisements';
                 desc.textContent = 'Get tailored adult content platforms for your area. Visit our Twitter.';
-                window.location.href = 'home/en.html'; // Fixed redirect
+                window.location.href = 'home/en.html';
             }
         }
 

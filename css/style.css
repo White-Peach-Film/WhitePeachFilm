@@ -59,7 +59,7 @@ body {
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    margin-top: 70px; /* Adjusted for fixed navbar */
+    margin-top: 70px;
 }
 
 .region-select {
@@ -173,7 +173,7 @@ h1 {
 
 .ad-frames {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Matches sites-grid */
     gap: 20px;
     margin: 25px auto;
     max-width: 1200px;
@@ -190,8 +190,6 @@ h1 {
     color: #e0e0e0;
     transition: transform 0.3s, box-shadow 0.3s;
     justify-content: center;
-    width: 120px;
-    height: 90px;
 }
 
 .ad-item:hover {
@@ -200,7 +198,7 @@ h1 {
 }
 
 .ad-item img {
-    max-width: 100%;
+    max-width: 100%; /* Adaptive within frame */
     max-height: 100%;
     object-fit: contain;
     border-radius: 8px;

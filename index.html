@@ -1,123 +1,114 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhitePeachFilm - 成人内容导航的去中心化平台</title>
+    <title>Age Verification</title>
     <style>
         body {
-            font-family: sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
-        h1 {
-            margin-bottom: 10px;
+
+        .container {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 204, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
         }
-        section {
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .logo span {
+            color: #ffcc00;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 12px 20px;
+            border: none;
             border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+            width: 48%;
         }
-        .feature-list {
-            list-style-type: disc;
-            padding-left: 20px;
+
+        .btn.yes {
+            background: #ffcc00;
+            color: #111;
         }
-        .token-info {
-            margin-top: 20px;
+
+        .btn.yes:hover {
+            background: #e6b800;
         }
-        .token-info p {
-            margin-bottom: 10px;
+
+        .btn.no {
+            background: #d9534f;
+            color: white;
         }
-        .support-us {
-            margin-top: 20px;
-        }
-        .deployment-info {
-            margin-top: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        a {
-            color: #007bff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+
+        .btn.no:hover {
+            background: #c9302c;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>WhitePeachFilm</h1>
-        <p>成人内容导航的去中心化平台</p>
-    </header>
-
-    <section>
-        <h2>概述</h2>
-        <p>WhitePeachFilm 是一个去中心化平台，旨在为成年人提供透明、安全和不受限制的成人内容导航体验。该平台基于区块链技术构建，优先考虑用户隐私和社区参与，为全球用户提供一个安全的空间。</p>
-        <p>该项目由 WhitePeachFilm 团队发起，部署在 Fleek 和 IPFS 上，并使用 Git 进行存储。代码由 Grok (xAI 创建) 开发。</p>
-    </section>
-
-    <section>
-        <h2>特点</h2>
-        <ul class="feature-list">
-            <li>内容导航：按地区浏览顶级成人内容平台。</li>
-            <li>Witep 代币：平台的原生代币，用于支持生态系统，提供收入分成和赞助特权。</li>
-            <li>社区投票：通过 StrawPoll 参与投票，无需登录。</li>
-            <li>精选创作者：发现全球成人产业的明星，并带有经过验证的链接。</li>
-            <li>去中心化部署：托管在 IPFS 上，以实现弹性和可访问性。</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Witep 代币</h2>
-        <div class="token-info">
-            <p><strong>名称：</strong> Witep 代币</p>
-            <p><strong>符号：</strong> WITEP</p>
-            <p><strong>总供应量：</strong> 52,000,000 WITEP</p>
-            <p><strong>小数位数：</strong> 18</p>
-            <p><strong>用途：</strong></p>
-            <ul class="feature-list">
-                <li>为平台开发和运营提供资金。</li>
-                <li>为前 100 名持有者提供季度收入分成。</li>
-                <li>授予前 10 名持有者赞助商资格，并在官方网站上展示。</li>
-            </ul>
+    <div class="container">
+        <div class="logo">WhitePeach<span>Film</span></div>
+        <h2>Are you 18 or older?</h2>
+        <p>This website contains adult content. You must be 18 years old to access it.</p>
+        <div class="buttons">
+            <button class="btn yes" id="yesBtn">Yes, I am 18+</button>
+            <button class="btn no" id="noBtn">No, exit</button>
         </div>
-        <div class="support-us">
-            <p><strong>支持我们：</strong> 捐赠到我们的 Tron 地址：TLputS46XN1K4wgUwrbutjqk6gyJRCY63i</p>
-            <p><strong>接受：</strong> USDT、TRX、USDD。</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>部署</h2>
-        <div class="deployment-info">
-            <p><strong>网站：</strong> <a href="https://getfleek.app/">https://getfleek.app/</a></p>
-            <p><strong>框架：</strong> HTML、CSS、JavaScript</p>
-            <p><strong>托管：</strong> Fleek + IPFS</p>
-            <p><strong>源码：</strong> <a href="https://phagetapes.bandcamp.com/album/nothing-special">https://phagetapes.bandcamp.com/album/nothing-special</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 WhitePeachFilm</p>
-    </footer>
+    </div>
 
     <script>
-        // JavaScript 代码可以放在这里
+        document.addEventListener("DOMContentLoaded", function() {
+            // 检查用户是否已经确认 18+
+            if (localStorage.getItem("ageVerified") === "true") {
+                window.location.href = "home.html";
+            }
+
+            document.getElementById("yesBtn").addEventListener("click", function() {
+                localStorage.setItem("ageVerified", "true");
+                window.location.href = "home.html";
+            });
+
+            document.getElementById("noBtn").addEventListener("click", function() {
+                window.close();
+            });
+        });
     </script>
 </body>
 </html>

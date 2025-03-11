@@ -3,30 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhitePeachFilm - External Link Notice</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Redirect Notice</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background-size: 400% 400%;
+            animation: gradientBG 6s ease infinite;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: #fff;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+
+        h2 {
+            margin: 0 0 15px;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s ease;
+        }
+
+        .btn.agree {
+            background: #28a745;
+            color: #fff;
+        }
+
+        .btn.agree:hover {
+            background: #218838;
+        }
+
+        .btn.decline {
+            background: #dc3545;
+            color: #fff;
+        }
+
+        .btn.decline:hover {
+            background: #c82333;
+        }
+    </style>
 </head>
 <body>
-    <div class="modal" style="display: flex;">
-        <div class="modal-content">
-            <h1>External Link Notice</h1>
-            <p>You are about to leave WhitePeachFilm and visit an external website. Please be aware:</p>
-            <ul>
-                <li>The content and services on the external site are not controlled or endorsed by WhitePeachFilm.</li>
-                <li>You are solely responsible for assessing the risks associated with accessing third-party content.</li>
-                <li>Any interactions, including paid subscriptions or services, are independent of WhitePeachFilm, and we bear no liability for them.</li>
-                <li>Ensure compliance with your local laws and regulations before proceeding.</li>
-            </ul>
-            <button onclick="proceed()">Proceed to External Site</button>
-            <button onclick="window.location.href='index.html'">Stay on WhitePeachFilm</button>
+    <div class="container">
+        <h2>Redirect Notice</h2>
+        <p>You are leaving this site to visit an external website. Any data, permissions, or transactions made on the target site are independent and not associated with us.</p>
+        <p>By clicking "Agree," you confirm that you understand and accept this.</p>
+        <div class="buttons">
+            <button class="btn agree" id="agreeBtn">Agree</button>
+            <button class="btn decline" onclick="window.location.href='home.html'">Decline</button>
         </div>
     </div>
+
     <script>
-        function proceed() {
-            const url = new URLSearchParams(window.location.search).get('url');
-            if (url) window.open(url, '_blank');
-        }
+        // 获取目标链接
+        const params = new URLSearchParams(window.location.search);
+        const targetURL = params.get("url");
+
+        document.getElementById("agreeBtn").addEventListener("click", function() {
+            if (targetURL) {
+                window.location.href = targetURL;
+            } else {
+                alert("Invalid target URL.");
+            }
+        });
     </script>
 </body>
 </html>

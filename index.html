@@ -105,12 +105,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             if (localStorage.getItem("ageVerified") === "true") {
-                window.location.href = "home.html";
+                window.location.href = "pages/home.html";
             }
 
             document.getElementById("yesBtn").addEventListener("click", function() {
                 localStorage.setItem("ageVerified", "true");
-                window.location.href = "home.html";
+                window.location.href = "pages/home.html";
             });
 
             document.getElementById("noBtn").addEventListener("click", function() {

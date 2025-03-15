@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WhitePeachFilm</title>
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Home</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #111;
             color: #f4f4f4;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
@@ -21,6 +26,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
 
         header .logo {
@@ -64,43 +73,44 @@
         }
 
         main {
-            padding: 20px;
+            padding-top: 70px; /* 留出导航栏空间 */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero {
-            background: #111;
-            color: #f4f4f4;
+        .section {
+            background: transparent;
             padding: 50px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-        .hero h1 {
+        .section h1 {
             font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
-        .hero p {
+        .section p {
             font-size: 1.2em;
-            opacity: 0.8;
-        }
-
-        .about {
-            background: #1a1a1a;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
-            margin-top: 20px;
-        }
-
-        .about h2 {
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .about p {
-            font-size: 1em;
             line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .section a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
         }
 
         footer {
@@ -108,26 +118,21 @@
             color: #f4f4f4;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            margin-top: 20px;
             width: 100%;
-            bottom: 0;
         }
 
         @media (max-width: 768px) {
-            .hero h1 {
+            .section h1 {
                 font-size: 2em;
             }
 
-            .hero p {
+            .section p {
                 font-size: 1em;
             }
 
-            .about h2 {
-                font-size: 1.5em;
-            }
-
-            .about p {
-                font-size: 0.9em;
+            .section a {
+                font-size: 1em;
             }
         }
     </style>
@@ -135,7 +140,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../images/logo.png" alt="WhitePeachFilm Logo">
+            <img src="/images/logo.jpg" alt="WhitePeachFilm Logo">
             <span>WhitePeachFilm</span>
         </div>
         <nav>
@@ -148,16 +153,19 @@
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <div class="section">
             <h1>Welcome to WhitePeachFilm</h1>
             <p>Your decentralized and private adult content navigation platform.</p>
-        </section>
-        <section class="about">
-            <h2>About WhitePeachFilm</h2>
-            <p>WhitePeachFilm is a decentralized platform designed to provide a secure and private way to access adult content. We do not host or provide any adult content ourselves. Instead, we offer a directory of links to various decentralized platforms and resources.</p>
-            <p>Our mission is to ensure that users can access content in a way that respects their privacy and adheres to decentralized principles. We do not collect any user data, and all interactions are anonymous.</p>
-            <p>Join us in building a more secure and private internet experience.</p>
-        </section>
+            <a href="tokenomics.html">Learn More</a>
+        </div>
+        <div class="section">
+            <h1>Our Platform</h1>
+            <p>WhitePeachFilm provides a secure and private way to access adult content. We do not host or provide any adult content ourselves. Instead, we offer a directory of links to various decentralized platforms and resources.</p>
+        </div>
+        <div class="section">
+            <h1>Join Our Community</h1>
+            <p>Join us in building a more secure and private internet experience. Your feedback and contributions are valuable to us.</p>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 WhitePeachFilm</p>

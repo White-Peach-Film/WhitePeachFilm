@@ -1,9 +1,192 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111;
+            color: #f4f4f4;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        header .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding-top: 70px; 
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
+            background: transparent;
+            padding: 50px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        .links-list a {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            background: #1a1a1a;
+            border-radius: 5px;
+            color: #f4f4f4;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background 0.3s ease;
+        }
+
+        .links-list a:hover {
+            background: #ffcc00;
+            color: #111;
+        }
+
+        footer {
+            background: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .links-list a {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/images/logo.jpg" alt="WhitePeachFilm Logo">
+            <span>WhitePeachFilm</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section">
+            <h1>Links</h1>
+            <p>Explore a curated list of decentralized adult content platforms.</p>
+        </div>
+        <div class="section">
+            <h2>Curated Links</h2>
+            <div class="links-list">
+                <a href="https://example.com/platform1" target="_blank">Platform 1</a>
+                <a href="https://example.com/platform2" target="_blank">Platform 2</a>
+                <a href="https://example.com/platform3" target="_blank">Platform 3</a>
+                <a href="https://example.com/platform4" target="_blank">Platform 4</a>
+                <a href="https://example.com/platform5" target="_blank">Platform 5</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 WhitePeachFilm</p>
+    </footer>
+</body>
 </html>

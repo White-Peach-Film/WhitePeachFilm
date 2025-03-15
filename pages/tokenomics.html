@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokenomics</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: #111;
+            color: #f4f4f4;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        header .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        header .logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        header nav {
+            display: flex;
+            justify-content: center;
+            margin-right: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #f4f4f4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding-top: 70px; /* 留出导航栏空间 */
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section {
+            background: transparent;
+            padding: 50px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 15px 0;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        .chart-container canvas {
+            max-width: 600px;
+        }
+
+        .chart-container .chart-text {
+            flex: 1;
+            padding-left: 20px;
+            text-align: left;
+        }
+
+        .animate-fade {
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .number-animate {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        footer {
+            background: #111;
+            color: #f4f4f4;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .section p {
+                font-size: 1em;
+            }
+
+            .chart-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .chart-container .chart-text {
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../images/logo.png" alt="WhitePeachFilm Logo">
+            <span>WhitePeachFilm</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="tokenomics.html">Tokenomics</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="section animate-fade">
+            <h1>Tokenomics</h1>
+            <p>Learn about the Witep Token, its total supply, and how it powers our platform.</p>
+        </div>
+        <div class="section animate-fade">
+            <h2>Witep Token Overview</h2>
+            <p><strong>Name:</strong> Witep Token</p>
+            <p><strong>Symbol:</strong> WITEP</p>
+            <p><strong>Total Supply:</strong> <span class="number-animate" data-target="52000000">0</span> WITEP</p>
+            <p><strong>Decimals:</strong> 18</p>
+            <p><strong>Blockchain:</strong> Tron</p>
+        </div>
+        <div class="section">
+            <h2>Token Allocation</h2>
+            <div class="chart-container">
+                <canvas id="tokenChart"></canvas>
+                <div class="chart-text">
+                    <p><strong>Project Team:</strong> <span class="number-animate" data-target="2000000">0</span> WITEP</p>
+                    <p><strong>DEX:</strong> <span class="number-animate" data-target="20000000">0</span> WITEP</p>
+                    <p><strong>Exchange Listing:</strong> <span class="number-animate" data-target="20000000">0</span> WITEP</p>
+                    <p><strong>Frozen for 10 Years:</strong> <span class="number-animate" data-target="10000000">0</span> WITEP (Unlocks 1,000,000 WITEP annually to the project wallet)</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Token Usage</h2>
+            <p>The Witep Token is designed to power various aspects of the WhitePeachFilm platform:</p>
+            <ul>
+                <li><strong>Revenue Sharing:</strong> Top 100 holders receive quarterly revenue shares.</li>
+                <li><strong>Sponsorship:</strong> Top 10 holders gain sponsorship status and are featured on the official website.</li>
+                <li><strong>Platform Development:</strong> Funds the development and operations of the platform.</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 WhitePeachFilm</p>
+    </footer>
+    <script>
+        const ctx = document.getElementById('tokenChart').getContext('2d');
+        const tokenChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['Project Team', 'DEX', 'Exchange Listing', 'Frozen for 10 Years'],
+                datasets: [{
+                    data: [2000000, 20000000, 20000000, 10000000],
+                    backgroundColor: ['#28a745', '#dc3545', '#ffc107', '#17a2b8']
+                }]
+            },
+            options: {
+                responsive: true,
+                animation: {
+                    animateRotate: true, // 启用旋转动画
+                    animateScale: true, // 启用缩放动画
+                },
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        // Number animation
+        document.querySelectorAll('.number-animate').forEach(item => {
+            const target = parseInt(item.getAttribute('data-target'));
+            let current = 0;
+            const interval = setInterval(() => {
+                if (current < target) {
+                    current += Math.ceil(target / 100);
+                    item.textContent = current.toLocaleString();
+                } else {
+                    clearInterval(interval);
+                }
+            }, 20);
+        });
+    </script>
+</body>
+</html>

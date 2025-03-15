@@ -106,7 +106,7 @@
 
         .chart-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             width: 100%;
             margin: 20px auto;
@@ -195,67 +195,7 @@
             <h2>Witep Token Overview</h2>
             <p><strong>Name:</strong> Witep Token</p>
             <p><strong>Symbol:</strong> WITEP</p>
-            <p><strong>Total Supply:</strong> <span class="number-animate" data-target="52000000">0</span> WITEP</p>
-            <p><strong>Decimals:</strong> 18</p>
-            <p><strong>Blockchain:</strong> Tron</p>
-        </div>
-        <div class="section">
-            <h2>Token Allocation</h2>
-            <div class="chart-container">
-                <canvas id="tokenChart"></canvas>
-                <div class="chart-text">
-                    <p><strong>Project Team:</strong> <span class="number-animate" data-target="2000000">0</span> WITEP</p>
-                    <p><strong>DEX:</strong> <span class="number-animate" data-target="20000000">0</span> WITEP</p>
-                    <p><strong>Exchange Listing:</strong> <span class="number-animate" data-target="20000000">0</span> WITEP</p>
-                    <p><strong>Frozen for 10 Years:</strong> <span class="number-animate" data-target="10000000">0</span> WITEP (Unlocks 1,000,000 WITEP annually to the project wallet)</p>
-                </div>
-            </div>
-        </div>
-        <div class="section">
-            <h2>Token Usage</h2>
-            <p>The Witep Token is designed to power various aspects of the WhitePeachFilm platform:</p>
-            <ul>
-                <li><strong>Revenue Sharing:</strong> Top 100 holders receive quarterly revenue shares.</li>
-                <li><strong>Sponsorship:</strong> Top 10 holders gain sponsorship status and are featured on the official website.</li>
-                <li><strong>Platform Development:</strong> Funds the development and operations of the platform.</li>
-            </ul>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 WhitePeachFilm</p>
-    </footer>
-    <script>
-        const ctx = document.getElementById('tokenChart').getContext('2d');
-        const tokenChart = new Chart(ctx, {
-            type: 'pie',
-            data: {
-                labels: ['Project Team', 'DEX', 'Exchange Listing', 'Frozen for 10 Years'],
-                datasets: [{
-                    data: [2000000, 20000000, 20000000, 10000000],
-                    backgroundColor: ['#28a745', '#dc3545', '#ffc107', '#17a2b8']
-                }]
-            },
-            options: {
-                responsive: true,
-                animation: {
-                    animateRotate: true, // 启用旋转动画
-                    animateScale: true, // 启用缩放动画
-                },
-                plugins: {
-                    legend: {
-                        position: 'top'
-                    }
-                }
-            }
-        });
-
-        // Number animation
-        document.querySelectorAll('.number-animate').forEach(item => {
-            const target = parseInt(item.getAttribute('data-target'));
-            let current = 0;
-            const interval = setInterval(() => {
-                if (current < target) {
-                    current += Math.ceil(target / 100);
+            <p><strong>Total Supply:</strong> <span class="number-animate" data-target="52000000">0</span> 100);
                     item.textContent = current.toLocaleString();
                 } else {
                     clearInterval(interval);

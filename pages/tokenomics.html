@@ -74,7 +74,7 @@
         }
 
         main {
-            padding-top: 70px; /* 留出导航栏空间 */
+            padding-top: 70px; 
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -141,6 +141,23 @@
             color: #ffcc00;
         }
 
+        .links {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .links a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             background: #111;
             color: #f4f4f4;
@@ -159,14 +176,8 @@
                 font-size: 1em;
             }
 
-            .chart-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .chart-container .chart-text {
-                padding-left: 0;
-                text-align: center;
+            .links a {
+                font-size: 1em;
             }
         }
     </style>
@@ -195,7 +206,7 @@
             <h2>Witep Token Overview</h2>
             <p><strong>Name:</strong> Witep Token</p>
             <p><strong>Symbol:</strong> WITEP</p>
-            <p><strong>Total Supply:</strong> <span class="number-animate" data-target="52000000">0</span> WITEP<//p>
+            <p><strong>Total Supply:</strong> <span class="number-animate" data-target="52000000">0</span> WITEP</p>
             <p><strong>Decimals:</strong> 18</p>
             <p><strong>Blockchain:</strong> Tron</p>
         </div>
@@ -220,6 +231,15 @@
                 <li><strong>Platform Development:</strong> Funds the development and operations of the platform.</li>
             </ul>
         </div>
+        <div class="section">
+            <h2>Where to Buy WITEP</h2>
+            <p>You can purchase WITEP on the following platforms:</p>
+            <div class="links">
+                <a href="https://just.money/?from=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t&n=TRON&t=swap&to=TXVrquH4BDGKyBLn9QcYq9rtWFSCEwjhGj" target="_blank">JustSwap</a>
+                <a href="https://tronscan.org/#/contract/TXVrquH4BDGKyBLn9QcYq9rtWFSCEwjhGj" target="_blank">TRON Mainnet Explorer</a>
+                <a href="https://www.oklink.com/zh-hans/trx/token/TXVrquH4BDGKyBLn9QcYq9rtWFSCEwjhGj" target="_blank">OKLink Explorer</a>
+            </div>
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 WhitePeachFilm</p>
@@ -238,8 +258,8 @@
             options: {
                 responsive: true,
                 animation: {
-                    animateRotate: true, 
-                    animateScale: true, 
+                    animateRotate: true, // 
+                    animateScale: true, // 
                 },
                 plugins: {
                     legend: {

@@ -73,7 +73,7 @@
         }
 
         main {
-            padding-top: 70px; 
+            padding-top: 70px; /* 留出导航栏空间 */
             flex: 1;
             display: flex;
             flex-direction: column;
@@ -103,31 +103,37 @@
             margin: 15px 0;
         }
 
-        .links-list {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
             width: 100%;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 20px auto;
         }
 
-        .links-list a {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
+        .link-item {
             background: #1a1a1a;
-            border-radius: 5px;
-            color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            font-size: 1.2em;
-            transition: background 0.3s ease;
+            color: #f4f4f4;
         }
 
-        .links-list a:hover {
-            background: #ffcc00;
-            color: #111;
+        .link-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        .link-item h3 {
+            font-size: 1.2em;
+            margin: 0;
         }
 
         footer {
@@ -140,15 +146,15 @@
         }
 
         @media (max-width: 768px) {
+            .links-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .section h2 {
                 font-size: 2em;
             }
 
             .section p {
-                font-size: 1em;
-            }
-
-            .links-list a {
                 font-size: 1em;
             }
         }
@@ -176,12 +182,87 @@
         </div>
         <div class="section">
             <h2>Curated Links</h2>
-            <div class="links-list">
-                <a href="https://example.com/platform1" target="_blank">Platform 1</a>
-                <a href="https://example.com/platform2" target="_blank">Platform 2</a>
-                <a href="https://example.com/platform3" target="_blank">Platform 3</a>
-                <a href="https://example.com/platform4" target="_blank">Platform 4</a>
-                <a href="https://example.com/platform5" target="_blank">Platform 5</a>
+            <div class="links-grid">
+                <a href="https://example.com/platform1" class="link-item" target="_blank">
+                    <img src="/images/platform1.png" alt="Platform 1">
+                    <h3>Platform 1</h3>
+                </a>
+                <a href="https://example.com/platform2" class="link-item" target="_blank">
+                    <img src="/images/platform2.png" alt="Platform 2">
+                    <h3>Platform 2</h3>
+                </a>
+                <a href="https://example.com/platform3" class="link-item" target="_blank">
+                    <img src="/images/platform3.png" alt="Platform 3">
+                    <h3>Platform 3</h3>
+                </a>
+                <a href="https://example.com/platform4" class="link-item" target="_blank">
+                    <img src="/images/platform4.png" alt="Platform 4">
+                    <h3>Platform 4</h3>
+                </a>
+                <a href="https://example.com/platform5" class="link-item" target="_blank">
+                    <img src="/images/platform5.png" alt="Platform 5">
+                    <h3>Platform 5</h3>
+                </a>
+                <a href="https://example.com/platform6" class="link-item" target="_blank">
+                    <img src="/images/platform6.png" alt="Platform 6">
+                    <h3>Platform 6</h3>
+                </a>
+                <a href="https://example.com/platform7" class="link-item" target="_blank">
+                    <img src="/images/platform7.png" alt="Platform 7">
+                    <h3>Platform 7</h3>
+                </a>
+                <a href="https://example.com/platform8" class="link-item" target="_blank">
+                    <img src="/images/platform8.png" alt="Platform 8">
+                    <h3>Platform 8</h3>
+                </a>
+                <a href="https://example.com/platform9" class="link-item" target="_blank">
+                    <img src="/images/platform9.png" alt="Platform 9">
+                    <h3>Platform 9</h3>
+                </a>
+                <a href="https://example.com/platform10" class="link-item" target="_blank">
+                    <img src="/images/platform10.png" alt="Platform 10">
+                    <h3>Platform 10</h3>
+                </a>
+                <a href="https://example.com/platform11" class="link-item" target="_blank">
+                    <img src="/images/platform11.png" alt="Platform 11">
+                    <h3>Platform 11</h3>
+                </a>
+                <a href="https://example.com/platform12" class="link-item" target="_blank">
+                    <img src="/images/platform12.png" alt="Platform 12">
+                    <h3>Platform 12</h3>
+                </a>
+                <a href="https://example.com/platform13" class="link-item" target="_blank">
+                    <img src="/images/platform13.png" alt="Platform 13">
+                    <h3>Platform 13</h3>
+                </a>
+                <a href="https://example.com/platform14" class="link-item" target="_blank">
+                    <img src="/images/platform14.png" alt="Platform 14">
+                    <h3>Platform 14</h3>
+                </a>
+                <a href="https://example.com/platform15" class="link-item" target="_blank">
+                    <img src="/images/platform15.png" alt="Platform 15">
+                    <h3>Platform 15</h3>
+                </a>
+                <a href="https://example.com/platform16" class="link-item" target="_blank">
+                    <img src="/images/platform16.png" alt="Platform 16">
+                    <h3>Platform 16</h3>
+                </a>
+                <a href="https://example.com/platform17" class="link-item" target="_blank">
+                    <img src="/images/platform17.png" alt="Platform 17">
+                    <h3>Platform 17</h3>
+                </a>
+                <a href="https://example.com/platform18" class="link-item" target="_blank">
+                    <img src="/images/platform18.png" alt="Platform 18">
+                    <h3>Platform 18</h3>
+                </a>
+                <a href="https://example.com/platform19" class="link-item" target="_blank">
+                    <img src="/images/platform19.png" alt="Platform 19">
+                    <h3>Platform 19</h3>
+                </a>
+                <a href="https://example.com/platform20" class="link-item" target="_blank">
+                    <img src="/images/platform20.png" alt="Platform 20">
+                    <h3>Platform 20</h3>
+                </a>
             </div>
         </div>
     </main>
